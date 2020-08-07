@@ -1,0 +1,25 @@
+.button {
+  @apply relative font-normal text-white font-mont px-12 text-xl tracking-widest py-4;
+  text-decoration: none;
+  overflow: hidden;
+
+  &:after {
+    @apply absolute top-0 left-0 bg-slate w-full h-full flex;
+    content: "";
+    z-index: -1;
+    transform: translateY(100%);
+    transition: 0.2s ease-in-out;
+  }
+
+  &:before {
+    @apply absolute top-0 left-0 bg-gray h-full w-full flex;
+    content: "";
+    z-index: -2;
+  }
+
+  &:hover {
+    &:after {
+      transform: translateY(0);
+    }
+  }
+}

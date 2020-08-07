@@ -1,0 +1,31 @@
+.header {
+  @apply absolute top-0 left-0 w-full text-white font-freight py-8 px-12 flex justify-center items-center;
+  z-index: 100;
+
+  &__nav {
+    @apply w-full flex justify-between items-center list-none uppercase;
+    max-width: 1200px;
+
+    a {
+      @apply relative;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.6);
+      z-index: 100;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        @apply text-white;
+        color: white;
+      }
+    }
+
+    li.center {
+      @apply font-bold tracking-wide capitalize;
+
+      a {
+        @apply text-white;
+      }
+      font-size: 1.6rem;
+    }
+  }
+}

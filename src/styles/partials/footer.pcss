@@ -1,0 +1,36 @@
+.footer {
+  @apply bg-slate py-4 text-white font-mont flex w-full justify-center items-center;
+  a {
+    @apply text-white relative;
+    text-decoration: none;
+  }
+
+  a,
+  span {
+    @apply mx-1;
+  }
+
+  span {
+    @apply text-gray relative;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      @apply cursor-pointer mx-2;
+      transform: scale(1.5);
+    }
+    .easteregg {
+      @apply absolute;
+      z-index: 600;
+      bottom: 105%;
+    }
+  }
+
+  a {
+    @apply relative flex;
+    &:after {
+      @apply flex bg-white absolute w-full;
+      height: 1px;
+      bottom: -2px;
+      content: "";
+    }
+  }
+}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Thomas & Felisha</title>
     <meta name="description" content="Thomas and Felisha's Wedding Page" />
-    <link rel="stylesheet" href="src/styles/app.css" />
+    <link rel="stylesheet" href="dist/styles/app.css" />
     <link
       rel="shortcut icon"
       href="src/images/favicon.ico"
@@ -16,25 +16,101 @@
     <header class="header">
       <ul class="header__nav">
         <li>
-          <a href="#rsvp">RSVP</a>
+          <a class="smooth" href="#rsvp">RSVP</a>
         </li>
         <li>
-          <a href="#accomodations">Accommodations</a>
+          <a class="smooth" href="#accomodations">Accommodations</a>
         </li>
         <li class="center">
-          Thomas & Felisha
+          <a class="smooth" href="/">Thomas & Felisha</a>
         </li>
         <li>
-          <a href="#registry">Registry</a>
+          <a class="smooth" href="#registry">Registry</a>
         </li>
         <li>
-          <a href="#venue">Venue</a>
+          <a class="smooth" href="#locations">Locations</a>
         </li>
       </ul>
     </header>
+    
     <section class="hero">
-      <img class="hero__bg" src="src/images/banner_bg.jpg" />
+      <img class="hero__bg" src="dist/images/banner_bg.jpg" />
+      <div class="hero__content">
+        <h1 class="hero__content--title">We're Engaged!</h1>
+        <p class="hero__content--sub">Early Spring 2021 <span></span>Location To Be Announced</p>
+      
+        <a class="button" href="#rsvp">RSVP</a>
+      </div>
     </section>
-    <!-- <script src="" async defer></script> -->
+
+    <section class="locations" id="locations">
+      <h3>Locations <br/>&  Times</h3>
+      <div class="locations__single">
+        <div class="locations__single--wrapper">
+          <div class="locations__single--thumbnail">
+            <img src="dist/images/ceremony.jpg" />
+          </div>
+          <h4>Ceremony</h4>
+          <div class="seperator"><i class="fal fa-rings-wedding"></i></div>
+          <time>10:00 <span>am</span></time>
+          <p>Somewhere</p>
+          <p>800 Chews Landing Rd Apt 14h</p>
+          <p>Lindenwold, NJ 08021</p>
+          <a href="https://goo.gl/maps/nGfmdiJfGnKJhsYRA" target="_blank">MAP + DIRECTIONS</a>
+        </div>
+      </div> 
+
+      <div class="locations__single">
+        <div class="locations__single--wrapper">
+          <div class="locations__single--thumbnail">
+            <img src="dist/images/reception.jpg" />
+          </div>
+          <h4>Reception</h4>
+          <div class="seperator"><i class="fal fa-glass-cheers"></i></div>
+          <time>1:00 <span>pm</span></time>
+          <p>Somewhere</p>
+          <p>800 Chews Landing Rd Apt 14h</p>
+          <p>Lindenwold, NJ 08021</p>
+          <a href="https://goo.gl/maps/nGfmdiJfGnKJhsYRA" target="_blank">MAP + DIRECTIONS</a>
+        </div>
+      </div> 
+    </section>
+  
+    <div class="bg-1"></div>
+    <section class="accomodations" id="accomodations">
+      <h3>Accomodations</h3>
+      <div class="accomodations__single">
+        <div class="accomodations__single--thumb">
+          <img src="dist/images/windward.jpg"/>
+        </div>
+        <h4>Windward <p class="price">$</p></h4>
+        <p class="distance">10 minutes away</p>
+        <p>200 S Atlantic Ave</p>
+        <p>Beach Haven, NJ 08008</p>
+        <a href="http://www.windwardatthebeach.com/" target="_blank">visit website</a>
+      </div>
+      <div class="accomodations__single">
+        <div class="accomodations__single--thumb">
+          <img src="dist/images/holiday_inn.jpg"/>
+        </div>
+        <h4>Holiday Inn <p class="price">$$</p></h4>
+        <p class="distance">20 minutes away</p>
+        <p>151 Route 72 West</p>
+        <p>Manahawkin, NJ 08050</p>
+        <a href="https://www.ihg.com/holidayinn/hotels/us/en/manahawkin/hwwnj/hoteldetail/hotel-room-rates" target="_blank">visit website</a>
+      </div>
+      <div class="accomodations__single">
+        <div class="accomodations__single--thumb">
+          <img src="dist/images/hotel_lbi.jpg"/>
+        </div>
+        <h4>Hotel LBI <p class="price">$$$</p></h4>
+        <p class="distance">15 minutes away</p>
+        <p>350 West 8th Street</p>
+        <p>Ship Bottom, NJ 08008</p>
+        <a href="https://hotellbi.com/" target="_blank">visit website</a>
+      </div>
+    </section>
+    <footer class="footer">Made with <span>❤</span> by <a href="https://github.com/RHartman99">Ryan Hartman</a></footer>
+    <script src="dist/scripts/app.js" async defer></script>
   </body>
 </html>

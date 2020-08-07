@@ -1,0 +1,64 @@
+.accomodations {
+  @apply -mx-8 flex justify-center items-center flex-wrap bg-linen w-full relative;
+  h3 {
+    @apply w-full;
+  }
+  &__single {
+    @apply flex m-8 flex-col justify-center items-center p-8 rounded bg-white;
+
+    &--thumb {
+      border: 2px solid black;
+      @apply p-6 border-gray;
+      img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+    }
+
+    h4 {
+      @apply flex flex-col items-center mb-0 justify-center font-josefin uppercase text-2xl;
+
+      &:after {
+        @apply relative flex my-2 bg-gray;
+        height: 20px;
+        width: 2px;
+        content: "";
+      }
+    }
+
+    .price {
+      @apply font-mont text-xl text-green my-0;
+    }
+    p {
+      @apply font-freight text-2xl text-black my-0 mb-2;
+    }
+    p:not(.distance) {
+      @apply my-0;
+      color: "#1C1C1CE6";
+    }
+
+    a {
+      @apply relative font-mont text-base font-bold mt-4 uppercase text-gray;
+      text-decoration: none;
+      transition: 0.4s ease-in-out;
+
+      &:after {
+        @apply flex absolute bg-gray;
+        height: 2px;
+        width: 0;
+        content: "";
+        top: 100%;
+        transition: 0.4s ease-in-out;
+      }
+
+      &:hover {
+        @apply text-slate;
+
+        &:after {
+          @apply bg-slate w-full;
+        }
+      }
+    }
+  }
+}

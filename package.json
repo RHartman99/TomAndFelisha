@@ -1,0 +1,42 @@
+{
+  "name": "tomandfelisha",
+  "version": "1.0.0",
+  "description": "Website for Tom and Felisha's wedding, engaged in 2020",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RHartman99/TomAndFelisha.git"
+  },
+  "author": "Ryan Hartman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RHartman99/TomAndFelisha/issues"
+  },
+  "homepage": "https://github.com/RHartman99/TomAndFelisha#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/pro-light-svg-icons": "^5.14.0",
+    "glob": "^7.1.6",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "laravel-mix": "^5.0.4",
+    "postcss-import": "^12.0.1",
+    "precss": "^4.0.0",
+    "tailwindcss": "^1.6.2",
+    "vanilla-lazyload": "^17.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
