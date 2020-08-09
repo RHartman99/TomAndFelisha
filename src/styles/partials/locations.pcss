@@ -1,10 +1,14 @@
 .locations {
-  @apply flex flex-col w-full justify-center items-center;
+  @apply -mx-12 flex flex-wrap w-full justify-center items-center;
   max-width: 100%;
   overflow: hidden;
 
+  h3 {
+    @apply w-full;
+  }
+
   &__single {
-    @apply flex mb-16 flex-col shadow-lg p-8 rounded justify-center items-center;
+    @apply mx-12 flex mb-16 flex-col shadow-lg p-8 rounded justify-center items-center;
 
     &--thumbnail {
       @apply relative;

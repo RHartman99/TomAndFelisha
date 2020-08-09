@@ -7,12 +7,11 @@ import {
 
 library.add(faGlassCheers, faRingsWedding);
 
-window.onload = () => {
-  dom.watch();
-  new LazyLoad({
-    elements_selector: ".lazy",
-  });
+let sticky = null;
+let progress = null;
+let bottomOfHero = 0;
 
+function smoothScrolling() {
   const hashes = document.querySelectorAll(".smooth");
   Array.from(hashes).forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -31,4 +30,40 @@ window.onload = () => {
       }
     });
   });
+}
+
+function checkSticky() {
+  if (window.scrollY > bottomOfHero - 10) sticky.classList.add("active");
+  else sticky.classList.remove("active");
+}
+
+function progressBar() {
+  const docHeight =
+    document.height !== undefined
+      ? document.height
+      : document.body.offsetHeight;
+  console.log((docHeight - window.scrollY) / docHeight);
+  const percentage =
+    (1 - (docHeight - window.scrollY - window.innerHeight) / docHeight) * 100;
+  progress.style.width = `${percentage}%`;
+}
+
+window.onload = () => {
+  dom.watch();
+  new LazyLoad({
+    elements_selector: ".lazy",
+  });
+  smoothScrolling();
+
+  const hero = document.querySelector(".hero");
+  sticky = document.querySelector("#sticky-header");
+  progress = document.querySelector("#progressBar");
+  bottomOfHero = hero.offsetTop + hero.offsetHeight;
+  checkSticky();
+  progressBar();
+};
+
+window.onscroll = () => {
+  checkSticky();
+  progressBar();
 };

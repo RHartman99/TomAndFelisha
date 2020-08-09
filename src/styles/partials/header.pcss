@@ -29,3 +29,44 @@
     }
   }
 }
+
+.sticky {
+  @apply flex justify-between w-full fixed top-0 left-0;
+  z-index: 600;
+  transform: translateY(calc(-100% - 4px));
+  transition: 0.4s ease-in-out;
+
+  &.active {
+    transform: translateY(0%);
+  }
+
+  &__nav {
+    @apply flex justify-between w-full bg-gray;
+    li {
+      @apply font-freight flex items-center justify-center w-1/5;
+      a {
+        @apply h-full py-4 bg-transparent flex text-white items-center justify-center w-full;
+        text-decoration: none;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          @apply bg-slate;
+        }
+      }
+      &:not(.center) {
+        @apply uppercase;
+      }
+
+      &.center {
+        @apply font-bold text-xl;
+      }
+    }
+  }
+
+  .progress {
+    @apply bg-slate absolute left-0 flex;
+    width: 0;
+    height: 4px;
+    bottom: -4px;
+  }
+}
