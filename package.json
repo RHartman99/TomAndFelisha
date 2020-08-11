@@ -4,7 +4,7 @@
   "description": "Website for Tom and Felisha's wedding, engaged in 2020",
   "main": "index.js",
   "scripts": {
-    "build": "npm run prod && rm -rf node_modules && rm -rf src",
+    "build": "npm i -g cross-env && npm run prod && rm -rf node_modules && rm -rf src",
     "start": "npm run watch",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
