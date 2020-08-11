@@ -42,7 +42,6 @@ function progressBar() {
     document.height !== undefined
       ? document.height
       : document.body.offsetHeight;
-  console.log((docHeight - window.scrollY) / docHeight);
   const percentage =
     (1 - (docHeight - window.scrollY - window.innerHeight) / docHeight) * 100;
   progress.style.width = `${percentage}%`;
