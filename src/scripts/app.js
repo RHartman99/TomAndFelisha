@@ -4,12 +4,17 @@ import {
   faGlassCheers,
   faRingsWedding,
 } from "@fortawesome/pro-light-svg-icons";
+import { faLongArrowAltRight } from "@fortawesome/pro-regular-svg-icons";
 
-library.add(faGlassCheers, faRingsWedding);
+library.add(faGlassCheers, faRingsWedding, faLongArrowAltRight);
 
 let sticky = null;
 let progress = null;
 let bottomOfHero = 0;
+
+function toggleMobile() {
+  document.querySelector(".mobile-menu").classList.toggle("active");
+}
 
 function smoothScrolling() {
   const hashes = document.querySelectorAll(".smooth");
@@ -58,6 +63,15 @@ window.onload = () => {
   sticky = document.querySelector("#sticky-header");
   progress = document.querySelector("#progressBar");
   bottomOfHero = hero.offsetTop + hero.offsetHeight;
+  setTimeout(() => {
+    console.log(document.querySelector("iframe"));
+    document.querySelector("iframe").style.width = "100vw";
+  }, 5000);
+  Array.from(document.querySelectorAll(".toggle-mobile")).forEach((el) => {
+    el.addEventListener("click", () => {
+      toggleMobile();
+    });
+  });
   checkSticky();
   progressBar();
 };

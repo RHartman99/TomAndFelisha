@@ -2,17 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <title>Thomas & Felisha</title>
-    <meta name="description" content="Thomas and Felisha's Wedding Page" />
-    <link rel="stylesheet" href="dist/styles/app.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta content="Thomas and Felisha's Wedding Page" name="description" />
+    <link href="dist/styles/app.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
   </head>
   <body>
+    <!-- Header/menu -->
+
     <header class="sticky" id="sticky-header">
       <ul class="sticky__nav">
         <li>
-          <a class="smooth" href="#rsvp">RSVP</a>
+          <a class="smooth" href="#locations">Locations</a>
         </li>
         <li>
           <a class="smooth" href="#accomodations">Accommodations</a>
@@ -21,10 +23,10 @@
           <a class="smooth" href="/">Thomas & Felisha</a>
         </li>
         <li>
-          <a class="smooth" href="#registry">Registry</a>
+          <a class="smooth" href="#rsvp">RSVP</a>
         </li>
         <li>
-          <a class="smooth" href="#locations">Locations</a>
+          <a class="smooth" href="#registry">Registry</a>
         </li>
       </ul>
       <div class="progress" id="progressBar"></div>
@@ -32,7 +34,7 @@
     <header class="header">
       <ul class="header__nav">
         <li>
-          <a class="smooth" href="#rsvp">RSVP</a>
+          <a class="smooth" href="#locations">Locations</a>
         </li>
         <li>
           <a class="smooth" href="#accomodations">Accommodations</a>
@@ -41,25 +43,49 @@
           <a class="smooth" href="/">Thomas & Felisha</a>
         </li>
         <li>
-          <a class="smooth" href="#registry">Registry</a>
+          <a class="smooth" href="#rsvp">RSVP</a>
         </li>
         <li>
-          <a class="smooth" href="#locations">Locations</a>
+          <a class="smooth" href="#registry">Registry</a>
         </li>
       </ul>
     </header>
+
+    <nav class="mobile-menu">
+      <button class="toggle-mobile">
+        <i class="far fa-long-arrow-alt-right"></i>
+      </button>
+      <a class="smooth toggle-menu" href="#locations">Locations</a>
+      <a class="smooth toggle-menu" href="#accomodations">Accommodations</a>
+      <a class="smooth toggle-menu" href="#rsvp">RSVP</a>
+      <a class="smooth toggle-menu" href="#registry">Registry</a>
+      <div class="toggle-mobile overlay"></div>
+    </nav>
+
+    <p id="mobile-logo">Thomas & Felisha</p>
+
+    <button id="open-mobile" class="toggle-mobile">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </button>
+
+    <!-- Hero -->
 
     <section class="hero">
       <img class="hero__bg" src="dist/images/banner_bg.jpg" />
       <div class="hero__content">
         <h1 class="hero__content--title">We're Engaged!</h1>
         <p class="hero__content--sub">
-          Early Spring 2021 <span></span>Location To Be Announced
+          Early Spring 2021
+          <span></span>Location To Be Announced
         </p>
 
         <a class="button" href="#rsvp">RSVP</a>
       </div>
     </section>
+
+    <!-- Locations -->
 
     <section class="locations" id="locations">
       <h3>Locations <br />& Times</h3>
@@ -69,8 +95,13 @@
             <img src="dist/images/ceremony.jpg" />
           </div>
           <h4>Ceremony</h4>
-          <div class="seperator"><i class="fal fa-rings-wedding"></i></div>
-          <time>10:00 <span>am</span></time>
+          <div class="seperator">
+            <i class="fal fa-rings-wedding"></i>
+          </div>
+          <time
+            >10:00
+            <span>am</span>
+          </time>
           <p>Somewhere</p>
           <p>800 Chews Landing Rd Apt 14h</p>
           <p>Lindenwold, NJ 08021</p>
@@ -86,8 +117,13 @@
             <img src="dist/images/reception.jpg" />
           </div>
           <h4>Reception</h4>
-          <div class="seperator"><i class="fal fa-glass-cheers"></i></div>
-          <time>1:00 <span>pm</span></time>
+          <div class="seperator">
+            <i class="fal fa-glass-cheers"></i>
+          </div>
+          <time
+            >1:00
+            <span>pm</span>
+          </time>
           <p>Somewhere</p>
           <p>800 Chews Landing Rd Apt 14h</p>
           <p>Lindenwold, NJ 08021</p>
@@ -97,6 +133,9 @@
         </div>
       </div>
     </section>
+
+    <!-- Accomodations -->
+
     <section class="accomodations" id="accomodations">
       <h3>Accomodations</h3>
       <div class="accomodations__single">
@@ -145,21 +184,40 @@
         <a href="https://hotellbi.com/" target="_blank">visit website</a>
       </div>
     </section>
+
+    <!-- RSVP -->
+
+    <section class="rsvp" id="rsvp">
+      <h3>RSVP</h3>
+      <script
+        scrolling="yes"
+        src="http://app.rsvpify.com/embed/500369257"
+        type="text/javascript"
+      ></script>
+    </section>
+
+    <!-- Registry -->
+
     <section class="registry" id="registry">
       <h3>Registry</h3>
       <div class="registry__iframe">
         <br />
         <script
           id="script_myregistry_giftlist_iframe"
-          type="text/javascript"
           src="//www.myregistry.com//Visitors/GiftList/iFrames/EmbedRegistry.ashx?r=xlcfGal0W5RWQrlLoUhNOg2&v=2"
+          type="text/javascript"
         ></script>
       </div>
     </section>
+
+    <!-- Footer -->
+
     <footer class="footer">
-      Made with <span>❤</span> by
+      Made with
+      <span>❤</span>
+      by
       <a href="https://github.com/RHartman99" target="_blank">Ryan Hartman</a>
     </footer>
-    <script src="dist/scripts/app.js" async defer></script>
+    <script async defer src="dist/scripts/app.js"></script>
   </body>
 </html>

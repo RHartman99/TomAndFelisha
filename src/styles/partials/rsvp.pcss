@@ -1,0 +1,16 @@
+.rsvp {
+  @apply bg-gray;
+  h3 {
+    @apply text-white relative;
+    z-index: 2;
+  }
+  iframe {
+    @apply w-screen -mt-24 relative !important;
+    z-index: 1;
+    height: 700px;
+
+    @media (max-width: 767px) {
+      height: 750px;
+    }
+  }
+}
