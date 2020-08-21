@@ -2,7 +2,41 @@
   @apply bg-gray pt-0;
 
   .covid {
-    @apply flex items-center justify-center bg-green text-white;
+    @apply flex flex-col font-josefin text-2xl py-12 items-center justify-center bg-green text-white;
+    background-color: #38a169;
+
+    &__banner {
+      @apply flex;
+      span {
+        @apply mr-2;
+      }
+    }
+
+    .caret {
+      &.active {
+        transform: translateY(-3px) rotate(180deg);
+      }
+    }
+
+    &__description {
+      @apply text-left font-freight text-black rounded-lg;
+      max-width: 600px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-in-out;
+
+      & > p {
+        @apply p-8 bg-white rounded-lg;
+      }
+
+      @media (max-width: 600px) {
+        max-width: 100%;
+      }
+    }
+
+    &:hover {
+      @apply cursor-pointer;
+    }
   }
   h3 {
     @apply text-white relative;

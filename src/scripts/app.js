@@ -5,9 +5,16 @@ import {
   faRingsWedding,
 } from "@fortawesome/pro-light-svg-icons";
 import { faLongArrowAltRight } from "@fortawesome/pro-regular-svg-icons";
+import { faCaretDown } from "@fortawesome/pro-solid-svg-icons";
 import { faViruses } from "@fortawesome/pro-duotone-svg-icons";
 
-library.add(faGlassCheers, faRingsWedding, faLongArrowAltRight, faViruses);
+library.add(
+  faGlassCheers,
+  faRingsWedding,
+  faLongArrowAltRight,
+  faViruses,
+  faCaretDown
+);
 
 let sticky = null;
 let progress = null;
@@ -76,6 +83,15 @@ window.onload = () => {
 
   checkSticky();
   progressBar();
+
+  document.querySelector(".rsvp").addEventListener("click", (el) => {
+    const desc = document.querySelector(".covid__description");
+    document.querySelector(".caret").classList.toggle("active");
+    desc.classList.toggle("active");
+    if (desc.classList.contains("active"))
+      desc.style.maxHeight = `${desc.scrollHeight}px`;
+    else desc.style.maxHeight = null;
+  });
 };
 
 window.onscroll = () => {
