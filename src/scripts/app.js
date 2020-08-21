@@ -5,8 +5,9 @@ import {
   faRingsWedding,
 } from "@fortawesome/pro-light-svg-icons";
 import { faLongArrowAltRight } from "@fortawesome/pro-regular-svg-icons";
+import { faViruses } from "@fortawesome/pro-duotone-svg-icons";
 
-library.add(faGlassCheers, faRingsWedding, faLongArrowAltRight);
+library.add(faGlassCheers, faRingsWedding, faLongArrowAltRight, faViruses);
 
 let sticky = null;
 let progress = null;
@@ -65,8 +66,8 @@ window.onload = () => {
   bottomOfHero = hero.offsetTop + hero.offsetHeight;
   let src = document.querySelector("iframe").src;
   document.querySelector("iframe").src = src.replace("http:", "https:");
-  let src = document.querySelector('[src*="http"]').src;
-  document.querySelector('[src*="http"]') = src.replace("http:", "https:");
+  src = document.querySelector('[src*="http"]').src;
+  document.querySelector('[src*="http"]').src = src.replace("http:", "https:");
   Array.from(document.querySelectorAll(".toggle-mobile")).forEach((el) => {
     el.addEventListener("click", () => {
       toggleMobile();
