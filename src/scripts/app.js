@@ -63,13 +63,16 @@ window.onload = () => {
   sticky = document.querySelector("#sticky-header");
   progress = document.querySelector("#progressBar");
   bottomOfHero = hero.offsetTop + hero.offsetHeight;
-  const src = document.querySelector("iframe").src;
+  let src = document.querySelector("iframe").src;
   document.querySelector("iframe").src = src.replace("http:", "https:");
+  let src = document.querySelector('[src*="http"]').src;
+  document.querySelector('[src*="http"]') = src.replace("http:", "https:");
   Array.from(document.querySelectorAll(".toggle-mobile")).forEach((el) => {
     el.addEventListener("click", () => {
       toggleMobile();
     });
   });
+
   checkSticky();
   progressBar();
 };

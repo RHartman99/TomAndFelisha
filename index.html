@@ -190,10 +190,25 @@
     <section class="rsvp" id="rsvp">
       <h3>RSVP</h3>
       <script
-        scrolling="yes"
-        src="https://app.rsvpify.com/embed/500369257"
         type="text/javascript"
+        src="http://app.rsvpify.com/embed/500369257"
+        scrolling="yes"
       ></script>
+      <script
+        type="text/javascript"
+        src="http://app.rsvpify.com/js/iframeResizer.min.js"
+      ></script>
+      <script type="text/javascript">
+        iFrameResize(
+          {
+            autoResize: true,
+            checkOrigin: false,
+            heightCalculationMethod: "max",
+            enablePublicMethods: true,
+          },
+          "#RSVPifyIFrame"
+        );
+      </script>
     </section>
 
     <!-- Registry -->
