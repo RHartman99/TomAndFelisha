@@ -18,15 +18,27 @@
 
     &--title {
       @apply text-6xl text-center m-0;
+
+      @media (max-width: 580px) {
+        @apply text-4xl;
+      }
     }
 
     &--sub {
       @apply flex my-2 justify-center items-center text-2xl font-mont font-normal;
-
       span {
         @apply h-full flex bg-gray mx-4;
         height: 30px;
         width: 2px;
+      }
+      @media (max-width: 580px) {
+        @apply text-lg flex-col;
+
+        span {
+          height: 2px;
+          width: 40px;
+          @apply my-2;
+        }
       }
     }
 

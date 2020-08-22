@@ -3,6 +3,10 @@
   max-width: 100%;
   overflow: hidden;
 
+  @media (max-width: 680px) {
+    @apply mx-0;
+  }
+
   h3 {
     @apply w-full;
   }
@@ -10,12 +14,18 @@
   &__single {
     @apply mx-12 flex mb-16 flex-col shadow-lg p-8 rounded justify-center items-center;
 
+    @media (max-width: 680px) {
+      @apply mx-0;
+    }
+
     &--thumbnail {
       @apply relative;
       border-radius: 50%;
       overflow: hidden;
-      width: 350px;
-      height: 350px;
+      @media (max-width: 680px) {
+        width: 200px;
+        height: 200px;
+      }
       img {
         @apply w-full h-full absolute top-0 left-0;
         object-fit: cover;
@@ -25,6 +35,10 @@
     &--wrapper {
       border: 2px solid black;
       @apply flex flex-col justify-center items-center border-gray p-24;
+
+      @media (max-width: 680px) {
+        @apply p-8;
+      }
     }
 
     h4 {
@@ -56,12 +70,12 @@
     }
 
     p {
-      @apply font-freight text-2xl my-0;
+      @apply text-center font-freight text-2xl my-0;
       color: "#1C1C1CE6";
     }
 
     a {
-      @apply relative mt-4 text-xl font-freight text-gray font-bold;
+      @apply text-center relative mt-4 text-xl font-freight text-gray font-bold;
       text-decoration: none;
       transition: 0.4s ease-in-out;
 
