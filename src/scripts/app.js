@@ -20,6 +20,25 @@ let sticky = null;
 let progress = null;
 let bottomOfHero = 0;
 
+window.onload = () => {
+  dom.watch();
+  new LazyLoad({
+    elements_selector: ".lazy",
+  });
+  smoothScrolling();
+  initVariables();
+  initToggleButtons();
+  initCovid();
+  removeHTTP();
+  checkSticky();
+  progressBar();
+};
+
+window.onscroll = () => {
+  checkSticky();
+  progressBar();
+};
+
 function toggleMobile() {
   document.querySelector(".mobile-menu").classList.toggle("active");
 }
@@ -60,30 +79,22 @@ function progressBar() {
   progress.style.width = `${percentage}%`;
 }
 
-window.onload = () => {
-  dom.watch();
-  new LazyLoad({
-    elements_selector: ".lazy",
-  });
-  smoothScrolling();
-
+function initVariables() {
   const hero = document.querySelector(".hero");
   sticky = document.querySelector("#sticky-header");
   progress = document.querySelector("#progressBar");
   bottomOfHero = hero.offsetTop + hero.offsetHeight;
-  let src = document.querySelector("iframe").src;
-  document.querySelector("iframe").src = src.replace("http:", "https:");
-  src = document.querySelector('[src*="http"]').src;
-  document.querySelector('[src*="http"]').src = src.replace("http:", "https:");
+}
+
+function initToggleButtons() {
   Array.from(document.querySelectorAll(".toggle-mobile")).forEach((el) => {
     el.addEventListener("click", () => {
       toggleMobile();
     });
   });
+}
 
-  checkSticky();
-  progressBar();
-
+function initCovid() {
   document.querySelector(".rsvp").addEventListener("click", (el) => {
     const desc = document.querySelector(".covid__description");
     document.querySelector(".caret").classList.toggle("active");
@@ -92,9 +103,10 @@ window.onload = () => {
       desc.style.maxHeight = `${desc.scrollHeight}px`;
     else desc.style.maxHeight = null;
   });
-};
+}
 
-window.onscroll = () => {
-  checkSticky();
-  progressBar();
-};
+function removeHTTP() {
+  document.querySelectorAll('[src*="http:"]').forEach((el) => {
+    el.src = el.src.replace("http:", "https:");
+  });
+}
