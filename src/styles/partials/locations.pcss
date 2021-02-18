@@ -41,6 +41,18 @@
       @media (max-width: 680px) {
         @apply p-8;
       }
+      .reception-to-follow {
+        padding-bottom: 12px;
+        position: relative;
+        margin-bottom: 10px;
+        &:after {
+          @apply bg-gray absolute bottom-0;
+          content: "";
+          left: -10%;
+          height: 2px;
+          width: 120%;
+        }
+      }
     }
 
     h4 {
